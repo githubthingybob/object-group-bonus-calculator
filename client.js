@@ -41,3 +41,75 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+function logForFunction (employeesArray) {
+  for (employee of employeesArray) {
+    console.log(employee);
+    bonusCalculator(employee);
+  }
+}
+
+console.log(employees[1]);
+
+let bonusArray = [];
+
+function bonusCalculator(employee) {
+  function bonusProfile(employeeName, bonusAmount) {
+    this.employeeName = employeeName;
+    this.bonusAmount = bonusAmount;
+  }
+  if (employee.reviewRating <= 2) {
+    bonusArray.push(bonusProfile(employee.name, 0))
+    //bonusArray.push(bonusProfile(employee.name, bonusAmount))
+  }
+  return employee;
+}
+
+console.log(logForFunction(employees));
+console.log(bonusArray);
+console.log(bonusCalculator(employees[1]));
+
+
+// function newObject (){
+//   function bonusProfile (name, bonusPercentage, totalComp, totalBonus){
+//     this.name = name;
+//     this.bonusPercentage = bonusPercentage;
+//     this.totalComp = totalComp;
+//     this.totalBonus = totalBonus;
+//   }
+//   bonusArray.push()
+// }
+
+
+
+
+/*
+function bonusCalculator(employee[i]) {
+  
+    /*let nameAndBonusPercentage = [];
+    nameAndBonusPercentage.push(let)this.name = name;
+  if (employee.reviewRating <= 2){
+    return employee.annualSalary;
+  }  
+  else if (rating = 3) {
+    return employee.annualSalary * .04;
+  }
+}
+console.log(bonusCalculator(employee[0]));
+
+
+//if (rating =<2) {no bonus}
+
+//if (rating = 3) { bonus 4%}
+
+//if (rating = 4) {bonus 6%}
+
+//if (rating = 5){bonus 10%}
+
+//if (employeeNumber > 4 digits){bonus additional 5%}
+
+//if ( income> 65,000){bonus -1%}
+
+const bonusMax = 13;
+const bonusMin = 0;
+*/

@@ -1,0 +1,23 @@
+hello
+
+Yo!
+
+Data Structure
+The company is providing you with a few samples of employee data of how their data is currently being stored. Each are stored in a global array named employees.
+
+Employee Array
+Each Employee currently is configured in this way:
+
+The name property holds the employees name.
+The employeeNumber property has their employee number.
+The annualSalary property contains their base annual salary.
+The reviewRating property contains their review rating.
+
+function Employee (name, number, salary, review) {
+    this.name = name;
+    this.number = number;
+    this.salary = salary;
+    this.review = review;
+}
+
+let Employee01 = new Employee (name, number, salary, review);
